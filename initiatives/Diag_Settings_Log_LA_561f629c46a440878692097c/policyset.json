@@ -1,0 +1,1142 @@
+{
+ "properties": {
+  "displayName": "Diag_Settings_Log_LA",
+  "policyType": "Custom",
+  "metadata": {
+   "category": "Automation",
+   "parameterScopes": {
+    "logAnalytics": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f",
+    "azureRegions": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f",
+    "logAnalyticsWorkspaceId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f"
+   },
+   "createdBy": "3463fc84-3b64-4c1f-b52b-f1f7dd9d093c",
+   "createdOn": "2021-06-06T09:58:13.9759402Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Batch Account to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c84e5349-db6d-4769-805e-e14037dab9b5",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Service Bus to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/04d53d87-841c-4f23-8a5b-21564380b55e",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.Network/loadBalancers to a Log Analytics Workspace_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/C89F5030DC8C4DD0F88D3B6C629D897A",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "azureRegions": {
+      "value": [
+       "asia",
+       "asiapacific",
+       "australia",
+       "australiacentral",
+       "australiacentral2",
+       "australiaeast",
+       "australiasoutheast",
+       "brazil",
+       "brazilsouth",
+       "brazilsoutheast",
+       "canada",
+       "canadacentral",
+       "canadaeast",
+       "centralus",
+       "centralindia",
+       "centralusstage",
+       "eastasia",
+       "eastasiastage",
+       "eastus",
+       "eastusstage",
+       "eastus2",
+       "eastus2stage",
+       "europe",
+       "francecentral",
+       "francesouth",
+       "germanynorth",
+       "germanywestcentral",
+       "global",
+       "india",
+       "japan",
+       "westus2stage",
+       "westus2",
+       "westusstage",
+       "westus",
+       "westindia",
+       "westeurope",
+       "westcentralus",
+       "unitedstates",
+       "uk",
+       "ukwest",
+       "uksouth",
+       "uaenorth",
+       "uaecentral",
+       "switzerlandwest",
+       "switzerlandnorth",
+       "southeastasiastage",
+       "southeastasia",
+       "southindia",
+       "southcentralusstage",
+       "southcentralus",
+       "southafricawest",
+       "southafricanorth",
+       "norwaywest",
+       "norwayeast",
+       "northeurope",
+       "northcentralusstage",
+       "northcentralus",
+       "koreasouth",
+       "koreacentral",
+       "jioindiawest",
+       "japanwest",
+       "japaneast"
+      ]
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.Network/networkSecurityGroups to a Log Analytics Workspace_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/C2E942DD7954DEB73491254DFA3FCB80",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "azureRegions": {
+      "value": [
+       "asia",
+       "asiapacific",
+       "australia",
+       "australiacentral",
+       "australiacentral2",
+       "australiaeast",
+       "australiasoutheast",
+       "brazil",
+       "brazilsouth",
+       "brazilsoutheast",
+       "canada",
+       "canadacentral",
+       "canadaeast",
+       "centralindia",
+       "centralus",
+       "centralusstage",
+       "eastasia",
+       "eastasiastage",
+       "eastus",
+       "eastusstage",
+       "eastus2",
+       "eastus2stage",
+       "europe",
+       "francecentral",
+       "francesouth",
+       "germanynorth",
+       "germanywestcentral",
+       "global",
+       "india",
+       "japan",
+       "japaneast",
+       "japanwest",
+       "jioindiawest",
+       "koreacentral",
+       "koreasouth",
+       "northcentralus",
+       "northcentralusstage",
+       "northeurope",
+       "norwaywest",
+       "norwayeast",
+       "southafricanorth",
+       "southafricawest",
+       "southcentralus",
+       "southcentralusstage",
+       "southindia",
+       "southeastasia",
+       "southeastasiastage",
+       "switzerlandnorth",
+       "uaecentral",
+       "switzerlandwest",
+       "uaenorth",
+       "uksouth",
+       "ukwest",
+       "uk",
+       "unitedstates",
+       "westcentralus",
+       "westeurope",
+       "westindia",
+       "westusstage",
+       "westus",
+       "westus2",
+       "westus2stage",
+       "westus3"
+      ]
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.Network/publicIPAddresses to a Log Analytics Workspace_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/69236DBA82C8CBFBD4F0FA62344CCA83",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "azureRegions": {
+      "value": [
+       "asia",
+       "asiapacific",
+       "australia",
+       "australiacentral",
+       "australiaeast",
+       "australiacentral2",
+       "australiasoutheast",
+       "brazil",
+       "brazilsouth",
+       "brazilsoutheast",
+       "canada",
+       "canadacentral",
+       "canadaeast",
+       "centralindia",
+       "centralus",
+       "centralusstage",
+       "eastasia",
+       "eastasiastage",
+       "eastus",
+       "eastus2",
+       "eastusstage",
+       "eastus2stage",
+       "europe",
+       "francecentral",
+       "francesouth",
+       "germanynorth",
+       "germanywestcentral",
+       "global",
+       "india",
+       "japan",
+       "japaneast",
+       "japanwest",
+       "jioindiawest",
+       "koreacentral",
+       "koreasouth",
+       "northcentralus",
+       "northcentralusstage",
+       "northeurope",
+       "norwayeast",
+       "norwaywest",
+       "southafricanorth",
+       "southafricawest",
+       "southcentralus",
+       "southcentralusstage",
+       "southindia",
+       "southeastasia",
+       "southeastasiastage",
+       "switzerlandnorth",
+       "switzerlandwest",
+       "uaecentral",
+       "uaenorth",
+       "uksouth",
+       "ukwest",
+       "uk",
+       "unitedstates",
+       "westcentralus",
+       "westeurope",
+       "westindia",
+       "westus",
+       "westusstage",
+       "westus2",
+       "westus2stage",
+       "westus3"
+      ]
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.Storage/storageAccounts (StorageV2) to a Log Analytics Works_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/4D3CF186A40A7C2C481B645A540C1C7C",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "azureRegions": {
+      "value": [
+       "asia",
+       "asiapacific",
+       "australia",
+       "australiacentral",
+       "australiacentral2",
+       "australiaeast",
+       "australiasoutheast",
+       "brazil",
+       "brazilsouth",
+       "brazilsoutheast",
+       "canada",
+       "canadacentral",
+       "canadaeast",
+       "centralindia",
+       "centralus",
+       "centralusstage",
+       "eastasia",
+       "eastasiastage",
+       "eastus",
+       "eastusstage",
+       "eastus2",
+       "eastus2stage",
+       "europe",
+       "francesouth",
+       "francecentral",
+       "germanynorth",
+       "germanywestcentral",
+       "india",
+       "global",
+       "japan",
+       "japaneast",
+       "japanwest",
+       "jioindiawest",
+       "koreacentral",
+       "northcentralus",
+       "koreasouth",
+       "northcentralusstage",
+       "northeurope",
+       "norwayeast",
+       "norwaywest",
+       "southafricanorth",
+       "southafricawest",
+       "southcentralus",
+       "southcentralusstage",
+       "southindia",
+       "southeastasia",
+       "southeastasiastage",
+       "switzerlandnorth",
+       "switzerlandwest",
+       "uaecentral",
+       "uaenorth",
+       "uksouth",
+       "ukwest",
+       "uk",
+       "unitedstates",
+       "westcentralus",
+       "westeurope",
+       "westindia",
+       "westus",
+       "westusstage",
+       "westus2",
+       "westus2stage",
+       "westus3"
+      ]
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.OperationalInsights/workspaces to a Log Analytics Workspace_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/3CB68922AFF76C909E2D2AA3A4D9217F",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "azureRegions": {
+      "value": [
+       "asia",
+       "asiapacific",
+       "australiacentral",
+       "australia",
+       "australiacentral2",
+       "australiaeast",
+       "australiasoutheast",
+       "brazilsouth",
+       "brazil",
+       "brazilsoutheast",
+       "canada",
+       "canadacentral",
+       "canadaeast",
+       "centralindia",
+       "centralus",
+       "centralusstage",
+       "eastasia",
+       "eastasiastage",
+       "eastus",
+       "eastus2",
+       "eastusstage",
+       "eastus2stage",
+       "europe",
+       "francecentral",
+       "francesouth",
+       "germanynorth",
+       "germanywestcentral",
+       "global",
+       "india",
+       "japan",
+       "japaneast",
+       "japanwest",
+       "jioindiawest",
+       "koreasouth",
+       "koreacentral",
+       "northcentralus",
+       "northcentralusstage",
+       "northeurope",
+       "norwayeast",
+       "norwaywest",
+       "southafricanorth",
+       "southafricawest",
+       "southcentralus",
+       "southcentralusstage",
+       "southindia",
+       "southeastasia",
+       "southeastasiastage",
+       "switzerlandnorth",
+       "switzerlandwest",
+       "uaecentral",
+       "uaenorth",
+       "uksouth",
+       "ukwest",
+       "uk",
+       "unitedstates",
+       "westcentralus",
+       "westeurope",
+       "westindia",
+       "westus",
+       "westusstage",
+       "westus2",
+       "westus2stage",
+       "westus3"
+      ]
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.RecoveryServices/vaults to a Log Analytics Workspace_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/21F57A48443C0A60112B8A2C96ED1E5D",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "azureRegions": {
+      "value": [
+       "asia",
+       "asiapacific",
+       "australia",
+       "australiacentral",
+       "australiacentral2",
+       "australiaeast",
+       "australiasoutheast",
+       "brazil",
+       "brazilsouth",
+       "canada",
+       "brazilsoutheast",
+       "canadacentral",
+       "canadaeast",
+       "centralindia",
+       "centralus",
+       "centralusstage",
+       "eastasia",
+       "eastasiastage",
+       "eastus",
+       "eastusstage",
+       "eastus2",
+       "eastus2stage",
+       "europe",
+       "francecentral",
+       "francesouth",
+       "germanynorth",
+       "germanywestcentral",
+       "global",
+       "india",
+       "japan",
+       "japanwest",
+       "japaneast",
+       "jioindiawest",
+       "koreasouth",
+       "koreacentral",
+       "northcentralus",
+       "northcentralusstage",
+       "northeurope",
+       "norwayeast",
+       "norwaywest",
+       "southafricanorth",
+       "southafricawest",
+       "southcentralus",
+       "southcentralusstage",
+       "southindia",
+       "southeastasia",
+       "southeastasiastage",
+       "switzerlandnorth",
+       "switzerlandwest",
+       "uaecentral",
+       "uaenorth",
+       "uksouth",
+       "ukwest",
+       "uk",
+       "unitedstates",
+       "westcentralus",
+       "westeurope",
+       "westindia",
+       "westus",
+       "westusstage",
+       "westus2",
+       "westus2stage"
+      ]
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.Network/networkInterfaces to a Log Analytics Workspace_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/204F3D038AD9D98BBF748C311CDBC999",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "azureRegions": {
+      "value": [
+       "asia",
+       "asiapacific",
+       "australiacentral",
+       "australia",
+       "australiacentral2",
+       "australiaeast",
+       "australiasoutheast",
+       "brazil",
+       "brazilsouth",
+       "brazilsoutheast",
+       "canada",
+       "canadacentral",
+       "canadaeast",
+       "centralindia",
+       "centralus",
+       "centralusstage",
+       "eastasia",
+       "eastasiastage",
+       "eastus",
+       "eastusstage",
+       "eastus2",
+       "eastus2stage",
+       "europe",
+       "francecentral",
+       "francesouth",
+       "germanynorth",
+       "germanywestcentral",
+       "global",
+       "india",
+       "japan",
+       "japaneast",
+       "japanwest",
+       "jioindiawest",
+       "koreacentral",
+       "koreasouth",
+       "northcentralus",
+       "northcentralusstage",
+       "northeurope",
+       "norwayeast",
+       "norwaywest",
+       "southafricanorth",
+       "southafricawest",
+       "southcentralus",
+       "southcentralusstage",
+       "southindia",
+       "southeastasia",
+       "southeastasiastage",
+       "switzerlandnorth",
+       "switzerlandwest",
+       "uaecentral",
+       "uaenorth",
+       "uksouth",
+       "ukwest",
+       "uk",
+       "unitedstates",
+       "westcentralus",
+       "westeurope",
+       "westindia",
+       "westus",
+       "westusstage",
+       "westus2",
+       "westus2stage",
+       "westus3"
+      ]
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.Network/virtualNetworks to a Log Analytics Workspace_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/103941B66EFD5882F03DEBBC8AC4C9A8",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "azureRegions": {
+      "value": [
+       "asia",
+       "asiapacific",
+       "australia",
+       "australiacentral2",
+       "australiacentral",
+       "australiaeast",
+       "australiasoutheast",
+       "brazil",
+       "brazilsouth",
+       "brazilsoutheast",
+       "canada",
+       "canadacentral",
+       "canadaeast",
+       "centralindia",
+       "centralus",
+       "eastasia",
+       "centralusstage",
+       "eastasiastage",
+       "eastus",
+       "eastusstage",
+       "eastus2",
+       "eastus2stage",
+       "europe",
+       "francecentral",
+       "francesouth",
+       "germanynorth",
+       "germanywestcentral",
+       "global",
+       "india",
+       "japan",
+       "japaneast",
+       "japanwest",
+       "jioindiawest",
+       "koreacentral",
+       "koreasouth",
+       "northcentralus",
+       "northcentralusstage",
+       "northeurope",
+       "norwayeast",
+       "southafricanorth",
+       "norwaywest",
+       "southafricawest",
+       "southcentralus",
+       "southcentralusstage",
+       "southindia",
+       "southeastasia",
+       "southeastasiastage",
+       "switzerlandnorth",
+       "switzerlandwest",
+       "uaecentral",
+       "uaenorth",
+       "uksouth",
+       "ukwest",
+       "uk",
+       "unitedstates",
+       "westcentralus",
+       "westeurope",
+       "westindia",
+       "westus",
+       "westusstage",
+       "westus2",
+       "westus2stage",
+       "westus3"
+      ]
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.Logic/workflows to a Log Analytics Workspace_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/0D32F82FC3AB649805888236FD965BE8",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "azureRegions": {
+      "value": [
+       "asia",
+       "asiapacific",
+       "australia",
+       "australiacentral",
+       "australiacentral2",
+       "australiaeast",
+       "australiasoutheast",
+       "brazil",
+       "brazilsouth",
+       "brazilsoutheast",
+       "canada",
+       "canadacentral",
+       "canadaeast",
+       "centralindia",
+       "centralus",
+       "centralusstage",
+       "eastasia",
+       "eastasiastage",
+       "eastus",
+       "eastusstage",
+       "eastus2",
+       "europe",
+       "eastus2stage",
+       "francecentral",
+       "francesouth",
+       "germanynorth",
+       "germanywestcentral",
+       "global",
+       "india",
+       "japan",
+       "japaneast",
+       "japanwest",
+       "jioindiawest",
+       "koreacentral",
+       "koreasouth",
+       "northcentralus",
+       "northcentralusstage",
+       "northeurope",
+       "southafricanorth",
+       "norwaywest",
+       "norwayeast",
+       "southafricawest",
+       "southcentralus",
+       "southcentralusstage",
+       "southindia",
+       "southeastasia",
+       "southeastasiastage",
+       "switzerlandnorth",
+       "switzerlandwest",
+       "uaecentral",
+       "uaenorth",
+       "uksouth",
+       "ukwest",
+       "uk",
+       "unitedstates",
+       "westcentralus",
+       "westeurope",
+       "westindia",
+       "westus",
+       "westusstage",
+       "westus2",
+       "westus2stage",
+       "westus3"
+      ]
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.KeyVault/vaults to a Log Analytics Workspace_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/05EE701865C5EF359979ED0C591C8928",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Apply Diagnostic Settings for Microsoft.Storage/storageAccounts (Storage) to a Log Analytics Workspa_1",
+    "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/0231FCA785ED25776C9924503CF8B1EB",
+    "parameters": {
+     "profileName": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "azureRegions": {
+      "value": [
+       "asia",
+       "asiapacific",
+       "australia",
+       "australiacentral",
+       "australiacentral2",
+       "australiaeast",
+       "australiasoutheast",
+       "brazil",
+       "brazilsouth",
+       "brazilsoutheast",
+       "canada",
+       "canadacentral",
+       "canadaeast",
+       "centralindia",
+       "centralus",
+       "centralusstage",
+       "eastasia",
+       "eastasiastage",
+       "eastus",
+       "eastusstage",
+       "eastus2",
+       "eastus2stage",
+       "europe",
+       "francecentral",
+       "francesouth",
+       "germanynorth",
+       "germanywestcentral",
+       "global",
+       "india",
+       "japan",
+       "japaneast",
+       "japanwest",
+       "jioindiawest",
+       "koreacentral",
+       "northcentralus",
+       "koreasouth",
+       "northcentralusstage",
+       "northeurope",
+       "norwayeast",
+       "norwaywest",
+       "southafricanorth",
+       "southafricawest",
+       "southcentralus",
+       "southcentralusstage",
+       "southindia",
+       "southeastasia",
+       "southeastasiastage",
+       "switzerlandnorth",
+       "switzerlandwest",
+       "uaecentral",
+       "uaenorth",
+       "uksouth",
+       "ukwest",
+       "uk",
+       "unitedstates",
+       "westcentralus",
+       "westeurope",
+       "westindia",
+       "westus",
+       "westusstage",
+       "westus2",
+       "westus2stage",
+       "westus3"
+      ]
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "The Log Analytics agent should be installed on Virtual Machine Scale Sets_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/efbde977-ba53-4479-b8e9-10b957924fbf",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Data Lake Analytics to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d56a5a7c-72d7-42bc-8ceb-3baf4c0eae03",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Batch Account to Log Analytics workspace_2",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c84e5349-db6d-4769-805e-e14037dab9b5",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Recovery Services Vault to Log Analytics workspace for resource speci_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c717fb0c-d118-4c43-ab3d-ece30ac81fb3",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Key Vault to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bef3f64c-5290-43b7-85b0-9b254eef4c47",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Logic Apps to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b889a06c-ec72-4b03-910a-cb169ee18721",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy - Configure diagnostic settings for SQL Databases to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b79fa14e-238a-4c2d-b376-442ce508fc84",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy - Configure diagnostic settings to a Log Analytics workspace to be enabled on Azure Key Vault_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b3884c81-31aa-473d-a9bb-9466fe0ec2a0",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "The Log Analytics agent should be installed on virtual machines_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a70ca396-0a34-413a-88e1-b956c1e683be",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy - Configure diagnostic settings for Azure Key Vault to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/951af2fa-529b-416e-ab6e-066fd85ac459",
+    "parameters": {
+     "diagnosticsSettingNameToUse": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Configure Azure SQL database servers diagnostic settings to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7ea8a143-05e3-4553-abfe-f56bef8b0b70",
+    "parameters": {
+     "logAnalyticsWorkspaceId": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Configure diagnostic settings for storage accounts to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6f8f98a4-f108-47cb-8e98-91a0d85cd474",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "servicesToDeploy": {
+      "value": [
+       "storageAccounts",
+       "blobServices",
+       "fileServices",
+       "tableServices",
+       "queueServices"
+      ]
+     },
+     "diagnosticsSettingNameToUse": {
+      "value": "setbypolicy_logAnalytics"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy - Configure diagnostic settings for Azure Kubernetes Service to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6c66c325-74c8-42fd-a286-a74b0e2939d8",
+    "parameters": {
+     "diagnosticsSettingNameToUse": {
+      "value": "setbypolicy_logAnalytics"
+     },
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy - Configure Log Analytics agent to be enabled on Windows virtual machine scale sets_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c1b3629-c8f8-4bf6-862c-037cb9094038",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Data Lake Storage Gen1 to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/25763a0a-5783-4f14-969e-79d4933eb74b",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Stream Analytics to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/237e0f7e-b0e8-4ec4-ad46-8c12cb66d673",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Configure Azure Activity logs to stream to specified Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2465583e-4e78-4c15-b6be-a36cbc7c8b0f",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Event Hub to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1f6e93e8-6b31-41b1-83f6-36e449a42579",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Diagnostic Settings for Search Services to Log Analytics workspace_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08ba64b8-738f-4918-9686-730d2ed79c7d",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     },
+     "metricsEnabled": {
+      "value": "True"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Log Analytics agent for Linux VMs_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/053d3325-282c-4e5c-b944-24faffd30d77",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy - Configure Log Analytics agent to be enabled on Windows virtual machines_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0868462e-646c-4fe3-9ced-a733534b6a2c",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policySetDefinitions/561f629c46a440878692097c",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "561f629c46a440878692097c"
+}
