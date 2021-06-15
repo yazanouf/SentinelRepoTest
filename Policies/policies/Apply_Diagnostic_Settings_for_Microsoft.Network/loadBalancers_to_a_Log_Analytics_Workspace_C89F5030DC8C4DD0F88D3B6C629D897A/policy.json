@@ -1,0 +1,194 @@
+{
+ "properties": {
+  "displayName": "Apply Diagnostic Settings for Microsoft.Network/loadBalancers to a Log Analytics Workspace",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "description": "This policy automatically deploys diagnostic settings to Apply Diagnostic Settings for Microsoft.Network/loadBalancers to a Log Analytics Workspace.",
+  "metadata": {
+   "category": "Monitoring",
+   "createdBy": "3463fc84-3b64-4c1f-b52b-f1f7dd9d093c",
+   "createdOn": "2020-11-24T07:29:32.3843515Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "profileName": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Profile Name for Config",
+     "description": "The profile name Azure Diagnostics"
+    }
+   },
+   "logAnalytics": {
+    "type": "String",
+    "metadata": {
+     "displayName": "logAnalytics",
+     "description": "The target Log Analytics Workspace for Azure Diagnostics",
+     "strongType": "omsWorkspace"
+    }
+   },
+   "azureRegions": {
+    "type": "Array",
+    "metadata": {
+     "displayName": "Allowed Locations",
+     "description": "The list of locations that can be specified when deploying resources",
+     "strongType": "location"
+    }
+   },
+   "metricsEnabled": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Enable Metrics",
+     "description": "Enable Metrics - True or False"
+    },
+    "allowedValues": [
+     "True",
+     "False"
+    ],
+    "defaultValue": "False"
+   },
+   "logsEnabled": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Enable Logs",
+     "description": "Enable Logs - True or False"
+    },
+    "allowedValues": [
+     "True",
+     "False"
+    ],
+    "defaultValue": "True"
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Network/loadBalancers"
+     },
+     {
+      "field": "location",
+      "in": "[parameters('AzureRegions')]"
+     }
+    ]
+   },
+   "then": {
+    "effect": "deployIfNotExists",
+    "details": {
+     "type": "Microsoft.Insights/diagnosticSettings",
+     "existenceCondition": {
+      "allOf": [
+       {
+        "field": "Microsoft.Insights/diagnosticSettings/logs.enabled",
+        "equals": "[parameters('LogsEnabled')]"
+       },
+       {
+        "field": "Microsoft.Insights/diagnosticSettings/metrics.enabled",
+        "equals": "[parameters('MetricsEnabled')]"
+       },
+       {
+        "field": "Microsoft.Insights/diagnosticSettings/workspaceId",
+        "equals": "[parameters('logAnalytics')]"
+       }
+      ]
+     },
+     "roleDefinitionIds": [
+      "/providers/Microsoft.Authorization/roleDefinitions/92aaf0da-9dab-42b6-94a3-d43ce8d16293"
+     ],
+     "deployment": {
+      "properties": {
+       "mode": "incremental",
+       "template": {
+        "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+        "contentVersion": "1.0.0.0",
+        "parameters": {
+         "name": {
+          "type": "string"
+         },
+         "location": {
+          "type": "string"
+         },
+         "logAnalytics": {
+          "type": "string"
+         },
+         "metricsEnabled": {
+          "type": "string"
+         },
+         "logsEnabled": {
+          "type": "string"
+         },
+         "profileName": {
+          "type": "string"
+         }
+        },
+        "variables": {},
+        "resources": [
+         {
+          "type": "Microsoft.Network/loadBalancers/providers/diagnosticSettings",
+          "apiVersion": "2017-05-01-preview",
+          "name": "[concat(parameters('name'), '/', 'Microsoft.Insights/', parameters('profileName'))]",
+          "location": "[parameters('location')]",
+          "dependsOn": [],
+          "properties": {
+           "workspaceId": "[parameters('logAnalytics')]",
+           "metrics": [
+            {
+             "category": "AllMetrics",
+             "enabled": "[parameters('metricsEnabled')]",
+             "retentionPolicy": {
+              "enabled": false,
+              "days": 0
+             }
+            }
+           ],
+           "logs": [
+            {
+             "category": "LoadBalancerAlertEvent",
+             "enabled": "[parameters('logsEnabled')]"
+            },
+            {
+             "category": "LoadBalancerProbeHealthStatus",
+             "enabled": "[parameters('logsEnabled')]"
+            }
+           ]
+          }
+         }
+        ],
+        "outputs": {
+         "policy": {
+          "type": "string",
+          "value": "[concat(parameters('logAnalytics'), 'configured for diagnostic logs for ', ': ', parameters('name'))]"
+         }
+        }
+       },
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('logAnalytics')]"
+        },
+        "location": {
+         "value": "[field('location')]"
+        },
+        "name": {
+         "value": "[field('name')]"
+        },
+        "metricsEnabled": {
+         "value": "[parameters('metricsEnabled')]"
+        },
+        "logsEnabled": {
+         "value": "[parameters('logsEnabled')]"
+        },
+        "profileName": {
+         "value": "[parameters('profileName')]"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "id": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/C89F5030DC8C4DD0F88D3B6C629D897A",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "C89F5030DC8C4DD0F88D3B6C629D897A"
+}

@@ -1,0 +1,170 @@
+{
+ "properties": {
+  "displayName": "Apply Diagnostic Settings for Microsoft.KeyVault/vaults to a Log Analytics Workspace",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "description": "This policy automatically deploys diagnostic settings to Apply Diagnostic Settings for Microsoft.KeyVault/vaults to a Log Analytics Workspace.",
+  "metadata": {
+   "category": "Monitoring",
+   "createdBy": "3463fc84-3b64-4c1f-b52b-f1f7dd9d093c",
+   "createdOn": "2021-03-14T08:42:28.4411112Z",
+   "updatedBy": "3463fc84-3b64-4c1f-b52b-f1f7dd9d093c",
+   "updatedOn": "2021-03-14T08:43:41.0746147Z"
+  },
+  "parameters": {
+   "profileName": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Profile Name for Config",
+     "description": "The profile name Azure Diagnostics"
+    }
+   },
+   "logAnalytics": {
+    "type": "String",
+    "metadata": {
+     "displayName": "logAnalytics",
+     "description": "The target Log Analytics Workspace for Azure Diagnostics",
+     "strongType": "omsWorkspace"
+    }
+   },
+   "metricsEnabled": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Enable Metrics",
+     "description": "Enable Metrics - True or False"
+    },
+    "allowedValues": [
+     "True",
+     "False"
+    ],
+    "defaultValue": "False"
+   },
+   "logsEnabled": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Enable Logs",
+     "description": "Enable Logs - True or False"
+    },
+    "allowedValues": [
+     "True",
+     "False"
+    ],
+    "defaultValue": "True"
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.KeyVault/vaults"
+     }
+    ]
+   },
+   "then": {
+    "effect": "deployIfNotExists",
+    "details": {
+     "type": "Microsoft.Insights/diagnosticSettings",
+     "existenceCondition": {
+      "allOf": [
+       {
+        "field": "Microsoft.Insights/diagnosticSettings/logs.enabled",
+        "equals": "[parameters('LogsEnabled')]"
+       },
+       {
+        "field": "Microsoft.Insights/diagnosticSettings/metrics.enabled",
+        "equals": "[parameters('MetricsEnabled')]"
+       },
+       {
+        "field": "Microsoft.Insights/diagnosticSettings/workspaceId",
+        "equals": "[parameters('logAnalytics')]"
+       }
+      ]
+     },
+     "roleDefinitionIds": [
+      "/providers/Microsoft.Authorization/roleDefinitions/92aaf0da-9dab-42b6-94a3-d43ce8d16293"
+     ],
+     "deployment": {
+      "properties": {
+       "mode": "incremental",
+       "template": {
+        "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+        "contentVersion": "1.0.0.0",
+        "parameters": {
+         "name": {
+          "type": "string"
+         },
+         "logAnalytics": {
+          "type": "string"
+         },
+         "metricsEnabled": {
+          "type": "string"
+         },
+         "logsEnabled": {
+          "type": "string"
+         },
+         "profileName": {
+          "type": "string"
+         }
+        },
+        "variables": {},
+        "resources": [
+         {
+          "type": "Microsoft.KeyVault/vaults/providers/diagnosticSettings",
+          "apiVersion": "2017-05-01-preview",
+          "name": "[concat(parameters('name'), '/', 'Microsoft.Insights/', parameters('profileName'))]",
+          "properties": {
+           "workspaceId": "[parameters('logAnalytics')]",
+           "metrics": [
+            {
+             "category": "AllMetrics",
+             "enabled": "[parameters('metricsEnabled')]",
+             "retentionPolicy": {
+              "enabled": false,
+              "days": 0
+             }
+            }
+           ],
+           "logs": [
+            {
+             "category": "AuditEvent",
+             "enabled": "[parameters('logsEnabled')]"
+            }
+           ]
+          }
+         }
+        ],
+        "outputs": {
+         "policy": {
+          "type": "string",
+          "value": "[concat(parameters('logAnalytics'), 'configured for diagnostic logs for ', ': ', parameters('name'))]"
+         }
+        }
+       },
+       "parameters": {
+        "logAnalytics": {
+         "value": "[parameters('logAnalytics')]"
+        },
+        "name": {
+         "value": "[field('name')]"
+        },
+        "metricsEnabled": {
+         "value": "[parameters('metricsEnabled')]"
+        },
+        "logsEnabled": {
+         "value": "[parameters('logsEnabled')]"
+        },
+        "profileName": {
+         "value": "[parameters('profileName')]"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "id": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/05EE701865C5EF359979ED0C591C8928",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "05EE701865C5EF359979ED0C591C8928"
+}

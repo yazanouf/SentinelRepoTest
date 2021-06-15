@@ -1,0 +1,40 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "identity": {
+  "principalId": "fe9e2589-dadd-45d2-b803-9d9e74261068",
+  "tenantId": "242dcb6d-e70a-400c-9652-9fd8e4919db0",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "Apply Diagnostic Settings for Microsoft.KeyVault/vaults to a Log Analytics Workspace",
+  "policyDefinitionId": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyDefinitions/05EE701865C5EF359979ED0C591C8928",
+  "scope": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f",
+  "notScopes": [],
+  "parameters": {
+   "profileName": {
+    "value": "Thisisfortesting"
+   },
+   "logAnalytics": {
+    "value": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup/providers/microsoft.operationalinsights/workspaces/uaela"
+   }
+  },
+  "metadata": {
+   "assignedBy": "MOD Administrator",
+   "parameterScopes": {
+    "logAnalytics": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/resourcegroups/yazangroup"
+   },
+   "createdBy": "3463fc84-3b64-4c1f-b52b-f1f7dd9d093c",
+   "createdOn": "2021-03-15T08:37:47.7094082Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/16ebcea6-7538-4350-a1d5-75d9120ece6f/providers/Microsoft.Authorization/policyAssignments/3f35290848914323bd0a5f07",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "3f35290848914323bd0a5f07",
+ "location": "eastus"
+}
